@@ -1,7 +1,9 @@
-version: "3.8"
 
 services:
 
-  docker-java-python:
-    container_name: docker-java-python
+  java-maven:
+    container_name: java-maven
     build: .
+    mem_limit: 100M
+    command: mvn --version
+    read_only: true
